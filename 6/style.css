@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jacquard 12", system-ui;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(100deg, #160115, #f2f2f2);
+}
+
+.wrapper {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    border-radius: 50px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .3);
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    background: url('image/fon.jpg') no-repeat;
+}
+
+.form-wrapper {
+    z-index: 2;
+}
+
+.wrapper .form-wrapper.login {
+    transition: .7s ease-in-out;
+    transition-delay: .7s;
+}
+
+.wrapper.active .form-wrapper.login {
+    transition-delay: 0s;
+    transform: translateX(-1000px)
+}
+
+.wrapper .form-wrapper.register {
+    position: absolute;
+    margin-top: 15px;
+    transform: translateX(-1000px);
+    transition: .7s ease-in-out;
+}
+
+.wrapper.active .form-wrapper.register {
+    transition-delay: .7s;
+    transform: translateX(0);
+}
+
+h2 {
+    font-size: 5em;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.input-box {
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #f2f2f2;
+    outline: none;
+    border-radius: 40px;
+    font-size: 2em;
+    color: #f02fe0;
+    padding: 0 20px 0 40px;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, .3)
+}
+
+.input-box .icon {
+    position: absolute;
+    left: 15px;
+    color: #f2f2f2;
+    font-size: 1.2em;
+    line-height: 55px;
+}
+
+.forgot-pass {
+    margin: -15px 0 15px 15px;
+}
+
+.forgot-pass a {
+    color: #f2f2f2;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+    color: #f02fe0;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background: #f2f2f2;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 2em;
+    color: #160115;
+    font-weight: 600;
+}
+
+.sign-link {
+    font-size: 2em;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.sign-link p {
+    color: #f02fe0;
+}
+
+.sign-link p a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sign-link p a:hover {
+    text-decoration: underline;
+    color: #f02fe0;
+}
